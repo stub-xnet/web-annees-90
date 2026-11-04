@@ -1,0 +1,181 @@
+/* ===== Niveau LÉGER (et GROSSIER) : contrôles, défilement, coins carrés ===== */
+html[data-web90] *,
+html[data-web90] *::before,
+html[data-web90] *::after {
+  border-radius: 0 !important;
+  scrollbar-color: auto !important;
+  scrollbar-width: auto !important;
+}
+
+html[data-web90],
+html[data-web90] body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='19' shape-rendering='crispEdges'%3E%3Cpath d='M0.5 0.5v15l4-4 3 6 2-1-3-6h5.5z' fill='white' stroke='black'/%3E%3C/svg%3E") 0 0, auto;
+}
+
+html[data-web90] ::selection { background: #000080 !important; color: #fff !important; }
+
+/* Barres de défilement Windows 95 */
+html[data-web90] ::-webkit-scrollbar { width: 16px; height: 16px; background: #3e3e43; }
+html[data-web90] ::-webkit-scrollbar-track {
+  background-color: #3e3e43;
+  background-image: repeating-conic-gradient(#2b2b2e 0 25%, #1c1c1e 0 50%);
+  background-size: 2px 2px;
+}
+html[data-web90] ::-webkit-scrollbar-thumb,
+html[data-web90] ::-webkit-scrollbar-button:single-button {
+  background-color: #2b2b2e;
+  box-shadow: inset -1px -1px #000000, inset 1px 1px #3e3e43, inset -2px -2px #161618, inset 2px 2px #5c5c62;
+}
+html[data-web90] ::-webkit-scrollbar-button:single-button { display: block; height: 16px; width: 16px; background-repeat: no-repeat; background-position: center; }
+html[data-web90] ::-webkit-scrollbar-button:single-button:vertical:decrement { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='4' shape-rendering='crispEdges'%3E%3Cpath fill='%23e6e6e6' d='M3 0h1v1h1v1h1v1h1v1H0V3h1V2h1V1h1z'/%3E%3C/svg%3E"); }
+html[data-web90] ::-webkit-scrollbar-button:single-button:vertical:increment { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='4' shape-rendering='crispEdges'%3E%3Cpath fill='%23e6e6e6' d='M0 0h7v1H6v1H5v1H4v1H3V3H2V2H1V1H0z'/%3E%3C/svg%3E"); }
+html[data-web90] ::-webkit-scrollbar-button:single-button:horizontal:decrement { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' shape-rendering='crispEdges'%3E%3Cpath fill='%23e6e6e6' d='M0 3h1V2h1V1h1V0h1v7H3V6H2V5H1V4H0z'/%3E%3C/svg%3E"); }
+html[data-web90] ::-webkit-scrollbar-button:single-button:horizontal:increment { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' shape-rendering='crispEdges'%3E%3Cpath fill='%23e6e6e6' d='M0 0h1v1h1v1h1v1h1v1H3v1H2v1H1v1H0z'/%3E%3C/svg%3E"); }
+html[data-web90] ::-webkit-scrollbar-button:single-button:active,
+html[data-web90] ::-webkit-scrollbar-thumb:active { box-shadow: inset 1px 1px #161618, inset -1px -1px #161618; }
+html[data-web90] ::-webkit-scrollbar-corner { background: #2b2b2e; }
+
+/* Boutons en relief */
+html[data-web90] button,
+html[data-web90] input[type="button"],
+html[data-web90] input[type="submit"],
+html[data-web90] input[type="reset"],
+html[data-web90] select {
+  background: #2b2b2e !important;
+  color: #e6e6e6 !important;
+  border: none !important;
+  box-shadow: inset -1px -1px #000000, inset 1px 1px #5c5c62, inset -2px -2px #161618, inset 2px 2px #3e3e43 !important;
+  font-family: Tahoma, "Liberation Sans", sans-serif !important;
+}
+html[data-web90] button:active,
+html[data-web90] input[type="button"]:active,
+html[data-web90] input[type="submit"]:active {
+  box-shadow: inset -1px -1px #5c5c62, inset 1px 1px #000000, inset -2px -2px #3e3e43, inset 2px 2px #161618 !important;
+}
+
+/* Champs de saisie en creux */
+html[data-web90] input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+html[data-web90] textarea {
+  background: #1c1c1e !important;
+  color: #e6e6e6 !important;
+  border: none !important;
+  box-shadow: inset -1px -1px #5c5c62, inset 1px 1px #161618, inset -2px -2px #3e3e43, inset 2px 2px #000000 !important;
+  outline: none !important;
+}
+
+/* ===== Niveau GROSSIER : polices et liens de 1997 ===== */
+html[data-web90="grossier"] body,
+html[data-web90="grossier"] body *:not([class*="icon" i]):not([class*="material"]):not([class*="symbol" i]):not([class^="fa"]):not([class*=" fa"]):not([aria-hidden="true"]):not(svg *):not(code):not(pre):not(code *):not(pre *):not(#web90-bandeau):not(#web90-bandeau *):not(:is(h1,h2,h3,h4,h5,h6)):not(:is(h1,h2,h3,h4,h5,h6) *) {
+  font-family: "Liberation Serif", "Times New Roman", serif !important;
+}
+html[data-web90="grossier"] :is(h1, h2, h3, h4, h5, h6),
+html[data-web90="grossier"] :is(h1, h2, h3, h4, h5, h6) *:not(svg *) {
+  font-family: "Comic Neue", "Comic Sans MS", cursive !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+html[data-web90="grossier"] a:link { color: #6ea6ff !important; text-decoration: underline !important; }
+html[data-web90="grossier"] a:visited { color: #c58af9 !important; }
+html[data-web90="grossier"] a:active { color: #ff7a5c !important; }
+html[data-web90="grossier"] * { transition: none !important; }
+html[data-web90="grossier"] hr { border: none !important; height: 2px !important; box-shadow: inset 0 1px #161618, inset 0 -1px #5c5c62 !important; }
+
+/* Sablier pendant le chargement */
+html[data-web90].web90-charge,
+html[data-web90].web90-charge * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='22' shape-rendering='crispEdges'%3E%3Cpath d='M1 1h14v3l-5 7 5 7v3H1v-3l5-7-5-7z' fill='white' stroke='black'/%3E%3Cpath d='M4 5h8l-4 5zM4 19l4-4 4 4z' fill='%23d4a017'/%3E%3C/svg%3E") 8 11, wait !important;
+}
+
+/* ===== GROSSIER : décor ===== */
+html[data-web90="grossier"][data-web90-fond="clair"] body { background: url("chrome-extension://__MSG_@@extension_id__/images/fond-clair.png") repeat !important; }
+html[data-web90="grossier"][data-web90-fond="sombre"] body { background: url("chrome-extension://__MSG_@@extension_id__/images/fond-sombre.png") repeat !important; }
+
+html[data-web90="grossier"] h1 { animation: web90-arcenciel 1.2s steps(1) infinite !important; text-shadow: 2px 2px 0 #161618 !important; }
+html[data-web90="grossier"] h1::after {
+  content: ""; display: inline-block; width: 70px; height: 40px; margin-left: 8px; vertical-align: middle;
+  background: url("chrome-extension://__MSG_@@extension_id__/images/nouveau.gif") no-repeat;
+}
+html[data-web90="grossier"] h2 { text-decoration: underline !important; }
+@keyframes web90-arcenciel {
+  0% { color: #ff0000; } 17% { color: #ff8000; } 33% { color: #d0d000; }
+  50% { color: #00b000; } 67% { color: #0000ff; } 83% { color: #a000c0; }
+}
+
+/* Bandeau « en construction » */
+#web90-bandeau {
+  all: initial;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 2147483646;
+  display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 4px;
+  background: #2b2b2e; box-shadow: inset 0 1px #5c5c62, 0 -1px #161618;
+  font: bold 14px "Comic Neue", "Comic Sans MS", cursive; color: #e6e6e6;
+}
+#web90-bandeau img { all: initial; height: 30px; image-rendering: pixelated; }
+#web90-bandeau .web90-defile { flex: 1; overflow: hidden; white-space: nowrap; color: #ff7a5c; font: inherit; }
+#web90-bandeau .web90-defile span { display: inline-block; padding-left: 100%; animation: web90-defile 26s linear infinite; font: inherit; color: inherit; }
+@keyframes web90-defile { to { transform: translateX(-100%); } }
+#web90-bandeau .web90-chantier {
+  padding: 1px 6px 1px 22px; color: #000; font: bold 12px Tahoma, sans-serif;
+  background: linear-gradient(#ffd800, #ffd800) 16px 0 / 100% 100% no-repeat,
+              repeating-linear-gradient(-45deg, #ffd800 0 4px, #000 4px 8px);
+  border: 1px solid #000;
+  animation: web90-clignote 1s steps(1) infinite;
+}
+#web90-bandeau .web90-compteur { display: flex; gap: 1px; padding: 2px; background: #000; box-shadow: inset 1px 1px #161618, inset -1px -1px #5c5c62; }
+#web90-bandeau .web90-compteur b { all: initial; width: 11px; text-align: center; background: #202020; color: #00ff00; font: bold 14px "MxPlus IBM VGA 9x16", monospace; }
+#web90-bandeau .web90-ecrire { display: flex; align-items: center; gap: 2px; color: #6ea6ff; text-decoration: underline; font: bold 13px "Comic Neue", cursive; cursor: pointer; }
+#web90-bandeau .web90-ecrire img { height: 26px; }
+@keyframes web90-clignote { 50% { opacity: 0; } }
+
+/* Boutons et fenêtres façon Windows 95 (bandeau, pop-ups, assistant) */
+#web90-bandeau button, .web90-fenetre button, #web90-disquette button {
+  all: initial; box-sizing: border-box; min-width: 18px; height: 16px; padding: 0 4px; text-align: center;
+  font: bold 11px Tahoma, sans-serif; color: #e6e6e6; background: #2b2b2e; cursor: pointer;
+  box-shadow: inset -1px -1px #000000, inset 1px 1px #5c5c62, inset -2px -2px #161618, inset 2px 2px #3e3e43;
+}
+.web90-fenetre button:active { box-shadow: inset -1px -1px #5c5c62, inset 1px 1px #000000, inset -2px -2px #3e3e43, inset 2px 2px #161618; }
+.web90-fenetre {
+  all: initial; position: fixed; z-index: 2147483647; width: 380px; padding: 3px; box-sizing: border-box;
+  background: #2b2b2e; font: 13px Tahoma, sans-serif; color: #e6e6e6;
+  box-shadow: inset -1px -1px #000000, inset 1px 1px #3e3e43, inset -2px -2px #161618, inset 2px 2px #5c5c62, 4px 4px 0 #0006;
+  animation: web90-apparait .15s steps(3);
+}
+.web90-fenetre .web90-titre {
+  display: flex; justify-content: space-between; align-items: center; height: 20px; padding: 0 3px 0 6px; cursor: move;
+  background: linear-gradient(90deg, #000080, #1084d0); color: #fff; font: bold 12px Tahoma, sans-serif; user-select: none;
+}
+.web90-fenetre .web90-titre span { font: inherit; color: inherit; }
+.web90-fenetre .web90-corps { display: flex; gap: 12px; align-items: center; padding: 14px 12px 8px; font: inherit; }
+.web90-fenetre .web90-corps img { flex: none; }
+.web90-fenetre .web90-corps p { all: initial; font: 13px Tahoma, sans-serif; color: #e6e6e6; line-height: 1.4; }
+.web90-fenetre .web90-corps b { all: initial; font: bold 13px Tahoma, sans-serif; color: #ff7a5c; }
+.web90-fenetre .web90-boutons { display: flex; justify-content: center; gap: 8px; padding: 6px 0 8px; }
+.web90-fenetre .web90-boutons button { width: 90px; height: 24px; font-weight: normal; font-size: 12px; }
+@keyframes web90-apparait { from { transform: scale(.3); } }
+
+/* Disquette, l'assistant */
+#web90-disquette {
+  all: initial; position: fixed; right: 16px; bottom: 44px; z-index: 2147483646;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+}
+#web90-disquette .web90-perso { cursor: pointer; animation: web90-sautille 2.4s steps(2) infinite; filter: drop-shadow(3px 3px 0 #0005); }
+#web90-disquette .web90-perso svg { display: block; }
+@keyframes web90-sautille { 50% { transform: translateY(-3px); } }
+#web90-disquette .web90-bulle[hidden] { display: none; }
+#web90-disquette .web90-bulle {
+  position: relative; max-width: 230px; padding: 10px 26px 10px 10px;
+  background: #2b2b2e; border: 1px solid #5c5c62; box-shadow: 3px 3px 0 #000a;
+  font: 13px Tahoma, sans-serif; color: #e6e6e6;
+}
+#web90-disquette .web90-bulle::after {
+  content: ""; position: absolute; right: 26px; bottom: -10px; border: 10px solid transparent; border-bottom: 0; border-top-color: #e6e6e6;
+}
+#web90-disquette .web90-bulle p { all: initial; font: 13px Tahoma, sans-serif; color: #e6e6e6; line-height: 1.35; }
+#web90-disquette .web90-bulle .web90-x { position: absolute; top: 4px; right: 4px; }
+
+/* Traînée d'étoiles */
+.web90-etoile {
+  all: initial; position: fixed; z-index: 2147483647; pointer-events: none;
+  font: bold 16px sans-serif; text-shadow: 1px 1px #000;
+  animation: web90-tombe .8s linear forwards;
+}
+@keyframes web90-tombe { to { transform: translate(var(--dx), 40px) rotate(180deg); opacity: 0; } }
